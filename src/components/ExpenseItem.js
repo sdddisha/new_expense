@@ -1,18 +1,17 @@
-
-import './Card.css';
-import Card from './Card';
+import Card from './Card'
 import ExpenseAmount from './ExpenseAmount';
 import ExpenseDate from './ExpenseDate';
 import ExpenseTitle from './ExpenseTitle';
-
+import './ExpenseItem.css';
 function ExpenseItem(props) {
     
   
     return(
         <>
        
-        <Card className="expenses">
-            <ExpenseTitle title={props.title} />
+        <Card className="expense-item">
+        
+         <ExpenseTitle title={props.title} />
             <ExpenseAmount amount={props.amount} />
 
             {/* <h2>Date: {props.date.toLocaleString('en-US',{month:'long'})}</h2> */}
@@ -21,6 +20,7 @@ function ExpenseItem(props) {
           
        
         </Card>
+        
         </>
     )
     

@@ -7,7 +7,7 @@ function ExpenseTitle(props){
         setTitle('Updated');
     }
 
-    return <div><h2>The Item is: {title}</h2>
+    return <div className="expense-item__description ">The Item is: {title}
      <button onClick={clicked}>Change Title</button></div>
 }
 export default ExpenseTitle;

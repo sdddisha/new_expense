@@ -23,10 +23,10 @@ const ExpenseForm=(props)=>{
     }
     props.onSaveExpenseData(expenseData); //child to parent data transeferring.
     
-    // console.log(expenseData);
-    // setAmount('');
-    // setDate('');
-    // setTitle('');
+    console.log(expenseData);
+    setAmount('');
+    setDate('');
+    setTitle('');
 
   }
     return(

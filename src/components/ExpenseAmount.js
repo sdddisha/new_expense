@@ -1,4 +1,5 @@
+import './ExpenseItem.css'
 function ExpenseAmount(props){
-    return <div><h3>The Price of item is: {props.amount}</h3></div>
+    return <div className="expense-item__price"> Amount is: {props.amount}</div>
 }
 export default ExpenseAmount;
