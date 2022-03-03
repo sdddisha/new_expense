@@ -1,5 +1,5 @@
 import React ,{useState} from 'react';
-
+import '../ExpenseItem.css'
 const ExpenseForm=(props)=>{
   const [enteredtitle, setTitle]=useState('') //here we used multiple usestate. we can also make object of usestate along with using prevState and then use it.
   const [enteredAmount, setAmount]=useState('')
@@ -30,7 +30,7 @@ const ExpenseForm=(props)=>{
 
   }
     return(
-        <form onSubmit={submitHandler}>
+        <form className="expense-item__price" onSubmit={submitHandler}>
         <label>
           Title:
           <input type="text" name="title" value={enteredtitle} onChange={titleChangeHandler} />
@@ -44,6 +44,7 @@ const ExpenseForm=(props)=>{
           <input type="date" name="date" value={enteredDate} onChange={DateChangeHandler} />
         </label>
         <input type="submit" value="Add item" />
+        <input type="submit" value=" Close" />
       </form>
     )
 }

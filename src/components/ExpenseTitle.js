@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 function ExpenseTitle(props){
     const [title,setTitle] =useState(props.title);
-    console.log('Calling');
+    // console.log('Calling');
      
     const clicked=()=>{
         setTitle('Updated');

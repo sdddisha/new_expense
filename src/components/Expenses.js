@@ -9,8 +9,13 @@ function Expenses(props){
   const filterChangeHandler=(selectedYear)=>{
     setFilteredYear(selectedYear)
     console.log(selectedYear)
-  }
-
+    }
+    console.log(filteredYear)
+  const filteredExpenses=props.product.filter(products=>{
+    return products.date.getFullYear().toString()===filteredYear;
+  
+  })
+  //console.log(filteredYear);
     return (
         <>
         <Card className="expenses">
@@ -18,13 +23,13 @@ function Expenses(props){
         
          {/* using map function to loop through ExpenseItem component. i,e. Dynamic Calling.Here products is passed as a parameter to map function */}
         
-         {props.product.map(products=>
+         {filteredExpenses.map((products=>
          <ExpenseItem 
          key={products.id}
          title={products.title} 
          amount={products.amount} 
          date={products.date} 
-         /> )} 
+         /> ))} 
          </Card>
 </>
         //static calling of component ExpenseItem 
